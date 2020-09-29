@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>milestone1</title>
+<title>Analyzing Travel Preferences</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,14 +13077,46 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://vasanth16.github.io">https://vasanth16.github.io</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Milestone-1">Milestone 1<a class="anchor-link" href="#Milestone-1">&#182;</a></h1><p>Sam Childs and Vasanth Rajasekaran</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>Vasanth and I will be working together on the final tutorial for this class. We have identified a dataset from UC Irvine which includes review data from travelers on Google Reviews. It is called “Travel Review Rating Dataset”, and it is found in the university’s Machine Learning Repository. We are interested in asking questions about whether average user feedback for a specific type of attraction yields insights into other kinds of attractions. Perhaps certain attraction classes have overlapping sets of fans, or perhaps another attraction class is highly polarizing. We are also wondering about frequency of reviews by attraction class. Perhaps few people who enjoy attraction type A try attraction type B, but the few that do really enjoy the experience. Insights into how markets for travel entertainment clear inefficiently would be of great value to tourism boards</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We are also investigating additional databases for travel data including data from other websites. We found a similar set for TripAdvisor, which follows a similar format. The challenge for comparing between datasets will be making comparisons when the attraction classes do not match. In some cases, two different review platforms might have a slightly different name for the same class of attractions. In others, classes might overlap, or worse, not exist at all in other datasets</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Collaboration-Plan">Collaboration Plan<a class="anchor-link" href="#Collaboration-Plan">&#182;</a></h2><p>To facilitate collaboration, Vasanth and I have set up a private Github repository to share workbooks and data. We will ensure that each commit to the Git repo will include thorough comments documenting the changes. We will meet over the phone weekly to update each other on our progress, or more frequently as necessary to facilitate deadlines. Included in these meetings will be discussions about how to resolve merges/conflicts as they arise during our work.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13097,7 +13129,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#The names list for the data set that is given on the data source website </span>
@@ -13135,7 +13167,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">travelData</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/google_review_ratings.csv&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">columnsList</span><span class="p">)</span>
@@ -13152,7 +13184,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -14689,19 +14721,6 @@ div#notebook {
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
