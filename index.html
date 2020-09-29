@@ -13124,7 +13124,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13137,12 +13137,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#The names list for the data set that is given on the data source website </span>
-<span class="n">columnsList</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Unique user id&#39;</span> 
-<span class="p">,</span><span class="s1">&#39;Average ratings on churches&#39;</span> 
+<span class="n">columnsList</span><span class="o">=</span><span class="p">[</span> <span class="s1">&#39;Unique user id &#39;</span><span class="p">,</span> <span class="s1">&#39;Average ratings on churches&#39;</span> 
 <span class="p">,</span><span class="s1">&#39;Average ratings on resorts&#39;</span> 
 <span class="p">,</span><span class="s1">&#39;Average ratings on beaches&#39;</span> 
 <span class="p">,</span><span class="s1">&#39;Average ratings on parks&#39;</span> 
@@ -13175,10 +13174,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">travelData</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/google_review_ratings.csv&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">columnsList</span><span class="p">)</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">travelData</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/google_review_ratings.csv&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">columnsList</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
 <span class="c1"># reads ratings CSV into pandas using header 0 and names from the list above</span>
 <span class="n">travelData</span> <span class="c1"># shows dataframe</span>
 </pre></div>
@@ -13193,7 +13192,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -13241,7 +13240,8 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
-      <th>User 1</th>
+      <th>0</th>
+      <td>User 1</td>
       <td>0.00</td>
       <td>0.00</td>
       <td>3.63</td>
@@ -13251,8 +13251,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.35</td>
       <td>2.33</td>
-      <td>2.64</td>
       <td>...</td>
+      <td>1.74</td>
       <td>0.59</td>
       <td>0.50</td>
       <td>0.00</td>
@@ -13262,10 +13262,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 2</th>
+      <th>1</th>
+      <td>User 2</td>
       <td>0.00</td>
       <td>0.00</td>
       <td>3.63</td>
@@ -13275,8 +13275,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.64</td>
       <td>2.33</td>
-      <td>2.65</td>
       <td>...</td>
+      <td>1.74</td>
       <td>0.59</td>
       <td>0.50</td>
       <td>0.00</td>
@@ -13286,10 +13286,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 3</th>
+      <th>2</th>
+      <td>User 3</td>
       <td>0.00</td>
       <td>0.00</td>
       <td>3.63</td>
@@ -13299,8 +13299,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.64</td>
       <td>2.33</td>
-      <td>2.64</td>
       <td>...</td>
+      <td>1.74</td>
       <td>0.59</td>
       <td>0.50</td>
       <td>0.00</td>
@@ -13310,10 +13310,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 4</th>
+      <th>3</th>
+      <td>User 4</td>
       <td>0.00</td>
       <td>0.50</td>
       <td>3.63</td>
@@ -13323,8 +13323,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.35</td>
       <td>2.33</td>
-      <td>2.64</td>
       <td>...</td>
+      <td>1.74</td>
       <td>0.59</td>
       <td>0.50</td>
       <td>0.00</td>
@@ -13334,10 +13334,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5</th>
+      <th>4</th>
+      <td>User 5</td>
       <td>0.00</td>
       <td>0.00</td>
       <td>3.63</td>
@@ -13347,8 +13347,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.64</td>
       <td>2.33</td>
-      <td>2.64</td>
       <td>...</td>
+      <td>1.74</td>
       <td>0.59</td>
       <td>0.50</td>
       <td>0.00</td>
@@ -13358,10 +13358,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 6</th>
+      <th>5</th>
+      <td>User 6</td>
       <td>0.00</td>
       <td>0.00</td>
       <td>3.63</td>
@@ -13371,8 +13371,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.63</td>
       <td>2.33</td>
-      <td>2.65</td>
       <td>...</td>
+      <td>1.74</td>
       <td>0.59</td>
       <td>0.50</td>
       <td>0.00</td>
@@ -13382,10 +13382,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 7</th>
+      <th>6</th>
+      <td>User 7</td>
       <td>0.00</td>
       <td>5.00</td>
       <td>3.63</td>
@@ -13395,8 +13395,8 @@ div#notebook {
       <td>3.03</td>
       <td>2.35</td>
       <td>2.33</td>
-      <td>2.64</td>
       <td>...</td>
+      <td>1.75</td>
       <td>0.59</td>
       <td>0.50</td>
       <td>0.00</td>
@@ -13406,10 +13406,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 8</th>
+      <th>7</th>
+      <td>User 8</td>
       <td>0.00</td>
       <td>5.00</td>
       <td>3.63</td>
@@ -13419,8 +13419,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.63</td>
       <td>2.33</td>
-      <td>2.64</td>
       <td>...</td>
+      <td>1.74</td>
       <td>0.60</td>
       <td>0.50</td>
       <td>0.00</td>
@@ -13430,10 +13430,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 9</th>
+      <th>8</th>
+      <td>User 9</td>
       <td>0.00</td>
       <td>5.00</td>
       <td>3.64</td>
@@ -13443,8 +13443,8 @@ div#notebook {
       <td>3.03</td>
       <td>2.62</td>
       <td>2.32</td>
-      <td>2.63</td>
       <td>...</td>
+      <td>0.75</td>
       <td>0.60</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13454,10 +13454,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 10</th>
+      <th>9</th>
+      <td>User 10</td>
       <td>0.00</td>
       <td>5.00</td>
       <td>3.64</td>
@@ -13467,8 +13467,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.35</td>
       <td>2.32</td>
-      <td>2.63</td>
       <td>...</td>
+      <td>0.74</td>
       <td>0.59</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13478,10 +13478,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 11</th>
+      <th>10</th>
+      <td>User 11</td>
       <td>0.00</td>
       <td>0.53</td>
       <td>3.65</td>
@@ -13491,8 +13491,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.61</td>
       <td>2.32</td>
-      <td>2.63</td>
       <td>...</td>
+      <td>0.74</td>
       <td>0.59</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13502,10 +13502,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 12</th>
+      <th>11</th>
+      <td>User 12</td>
       <td>0.00</td>
       <td>0.53</td>
       <td>3.65</td>
@@ -13515,8 +13515,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.61</td>
       <td>2.31</td>
-      <td>2.62</td>
       <td>...</td>
+      <td>0.73</td>
       <td>0.58</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13526,10 +13526,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 13</th>
+      <th>12</th>
+      <td>User 13</td>
       <td>0.00</td>
       <td>0.54</td>
       <td>3.66</td>
@@ -13539,8 +13539,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.61</td>
       <td>2.30</td>
-      <td>2.62</td>
       <td>...</td>
+      <td>0.72</td>
       <td>0.58</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13550,10 +13550,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 14</th>
+      <th>13</th>
+      <td>User 14</td>
       <td>0.00</td>
       <td>0.54</td>
       <td>3.66</td>
@@ -13563,8 +13563,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.32</td>
       <td>2.30</td>
-      <td>5.00</td>
       <td>...</td>
+      <td>0.76</td>
       <td>0.62</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13574,10 +13574,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 15</th>
+      <th>14</th>
+      <td>User 15</td>
       <td>0.00</td>
       <td>0.53</td>
       <td>3.67</td>
@@ -13587,8 +13587,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.33</td>
       <td>2.31</td>
-      <td>2.62</td>
       <td>...</td>
+      <td>0.76</td>
       <td>0.53</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13598,10 +13598,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 16</th>
+      <th>15</th>
+      <td>User 16</td>
       <td>0.00</td>
       <td>0.52</td>
       <td>3.69</td>
@@ -13611,8 +13611,8 @@ div#notebook {
       <td>5.00</td>
       <td>2.98</td>
       <td>2.31</td>
-      <td>2.33</td>
       <td>...</td>
+      <td>0.76</td>
       <td>0.53</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13622,10 +13622,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 17</th>
+      <th>16</th>
+      <td>User 17</td>
       <td>0.00</td>
       <td>0.52</td>
       <td>3.68</td>
@@ -13635,8 +13635,8 @@ div#notebook {
       <td>2.96</td>
       <td>2.98</td>
       <td>1.70</td>
-      <td>2.62</td>
       <td>...</td>
+      <td>0.76</td>
       <td>0.53</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13646,10 +13646,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 18</th>
+      <th>17</th>
+      <td>User 18</td>
       <td>0.00</td>
       <td>0.53</td>
       <td>3.69</td>
@@ -13659,8 +13659,8 @@ div#notebook {
       <td>2.95</td>
       <td>3.00</td>
       <td>1.70</td>
-      <td>2.62</td>
       <td>...</td>
+      <td>0.76</td>
       <td>0.53</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13670,10 +13670,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 19</th>
+      <th>18</th>
+      <td>User 19</td>
       <td>0.00</td>
       <td>0.52</td>
       <td>5.00</td>
@@ -13683,8 +13683,8 @@ div#notebook {
       <td>2.95</td>
       <td>2.99</td>
       <td>1.70</td>
-      <td>2.62</td>
       <td>...</td>
+      <td>0.77</td>
       <td>0.59</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13694,10 +13694,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 20</th>
+      <th>19</th>
+      <td>User 20</td>
       <td>0.00</td>
       <td>5.00</td>
       <td>3.70</td>
@@ -13707,8 +13707,8 @@ div#notebook {
       <td>2.94</td>
       <td>2.99</td>
       <td>1.70</td>
-      <td>2.62</td>
       <td>...</td>
+      <td>0.81</td>
       <td>0.59</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13718,10 +13718,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 21</th>
+      <th>20</th>
+      <td>User 21</td>
       <td>0.00</td>
       <td>0.51</td>
       <td>5.00</td>
@@ -13731,8 +13731,8 @@ div#notebook {
       <td>2.95</td>
       <td>2.98</td>
       <td>1.70</td>
-      <td>2.62</td>
       <td>...</td>
+      <td>0.81</td>
       <td>0.64</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13742,10 +13742,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 22</th>
+      <th>21</th>
+      <td>User 22</td>
       <td>0.00</td>
       <td>5.00</td>
       <td>5.00</td>
@@ -13755,8 +13755,8 @@ div#notebook {
       <td>2.94</td>
       <td>3.00</td>
       <td>1.70</td>
-      <td>2.31</td>
       <td>...</td>
+      <td>0.81</td>
       <td>0.62</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13766,10 +13766,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 23</th>
+      <th>22</th>
+      <td>User 23</td>
       <td>0.00</td>
       <td>5.00</td>
       <td>5.00</td>
@@ -13779,8 +13779,8 @@ div#notebook {
       <td>2.94</td>
       <td>3.00</td>
       <td>1.70</td>
-      <td>2.31</td>
       <td>...</td>
+      <td>0.91</td>
       <td>0.62</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13790,10 +13790,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 24</th>
+      <th>23</th>
+      <td>User 24</td>
       <td>0.00</td>
       <td>0.51</td>
       <td>5.00</td>
@@ -13803,8 +13803,8 @@ div#notebook {
       <td>2.95</td>
       <td>2.97</td>
       <td>1.71</td>
-      <td>2.31</td>
       <td>...</td>
+      <td>1.69</td>
       <td>0.68</td>
       <td>0.00</td>
       <td>0.00</td>
@@ -13814,10 +13814,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 25</th>
+      <th>24</th>
+      <td>User 25</td>
       <td>0.00</td>
       <td>0.51</td>
       <td>0.52</td>
@@ -13827,8 +13827,8 @@ div#notebook {
       <td>2.94</td>
       <td>2.63</td>
       <td>1.71</td>
-      <td>2.31</td>
       <td>...</td>
+      <td>1.70</td>
       <td>0.70</td>
       <td>0.52</td>
       <td>0.00</td>
@@ -13838,10 +13838,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 26</th>
+      <th>25</th>
+      <td>User 26</td>
       <td>0.00</td>
       <td>0.52</td>
       <td>0.52</td>
@@ -13851,8 +13851,8 @@ div#notebook {
       <td>2.94</td>
       <td>2.96</td>
       <td>1.71</td>
-      <td>2.31</td>
       <td>...</td>
+      <td>1.76</td>
       <td>0.69</td>
       <td>0.53</td>
       <td>0.00</td>
@@ -13862,10 +13862,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 27</th>
+      <th>26</th>
+      <td>User 27</td>
       <td>0.00</td>
       <td>0.55</td>
       <td>0.52</td>
@@ -13875,8 +13875,8 @@ div#notebook {
       <td>2.94</td>
       <td>2.63</td>
       <td>1.72</td>
-      <td>2.31</td>
       <td>...</td>
+      <td>1.76</td>
       <td>0.69</td>
       <td>0.55</td>
       <td>0.00</td>
@@ -13886,10 +13886,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 28</th>
+      <th>27</th>
+      <td>User 28</td>
       <td>0.00</td>
       <td>0.51</td>
       <td>5.00</td>
@@ -13899,8 +13899,8 @@ div#notebook {
       <td>2.94</td>
       <td>2.63</td>
       <td>1.71</td>
-      <td>2.31</td>
       <td>...</td>
+      <td>1.76</td>
       <td>0.69</td>
       <td>0.55</td>
       <td>0.00</td>
@@ -13910,10 +13910,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 29</th>
+      <th>28</th>
+      <td>User 29</td>
       <td>0.00</td>
       <td>0.53</td>
       <td>0.52</td>
@@ -13923,8 +13923,8 @@ div#notebook {
       <td>2.94</td>
       <td>2.63</td>
       <td>1.71</td>
-      <td>2.31</td>
       <td>...</td>
+      <td>1.76</td>
       <td>0.57</td>
       <td>0.55</td>
       <td>0.00</td>
@@ -13934,10 +13934,10 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 30</th>
+      <th>29</th>
+      <td>User 30</td>
       <td>0.00</td>
       <td>0.53</td>
       <td>0.52</td>
@@ -13947,8 +13947,8 @@ div#notebook {
       <td>2.94</td>
       <td>2.63</td>
       <td>1.71</td>
-      <td>2.31</td>
       <td>...</td>
+      <td>1.76</td>
       <td>0.57</td>
       <td>0.56</td>
       <td>0.00</td>
@@ -13958,7 +13958,6 @@ div#notebook {
       <td>0.0</td>
       <td>0.00</td>
       <td>0.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <th>...</th>
@@ -13985,7 +13984,8 @@ div#notebook {
       <td>...</td>
     </tr>
     <tr>
-      <th>User 5427</th>
+      <th>5426</th>
+      <td>User 5427</td>
       <td>4.41</td>
       <td>3.63</td>
       <td>5.00</td>
@@ -13995,8 +13995,8 @@ div#notebook {
       <td>2.59</td>
       <td>1.41</td>
       <td>4.86</td>
-      <td>1.36</td>
       <td>...</td>
+      <td>0.93</td>
       <td>0.79</td>
       <td>0.78</td>
       <td>0.79</td>
@@ -14006,10 +14006,10 @@ div#notebook {
       <td>5.0</td>
       <td>0.72</td>
       <td>5.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5428</th>
+      <th>5427</th>
+      <td>User 5428</td>
       <td>4.41</td>
       <td>3.65</td>
       <td>5.00</td>
@@ -14019,8 +14019,8 @@ div#notebook {
       <td>2.52</td>
       <td>1.41</td>
       <td>1.39</td>
-      <td>1.36</td>
       <td>...</td>
+      <td>0.93</td>
       <td>0.79</td>
       <td>0.78</td>
       <td>0.79</td>
@@ -14030,10 +14030,10 @@ div#notebook {
       <td>5.0</td>
       <td>0.75</td>
       <td>0.72</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5429</th>
+      <th>5428</th>
+      <td>User 5429</td>
       <td>4.41</td>
       <td>3.63</td>
       <td>3.69</td>
@@ -14043,8 +14043,8 @@ div#notebook {
       <td>2.52</td>
       <td>1.41</td>
       <td>1.39</td>
-      <td>1.36</td>
       <td>...</td>
+      <td>3.59</td>
       <td>0.79</td>
       <td>0.78</td>
       <td>0.78</td>
@@ -14054,10 +14054,10 @@ div#notebook {
       <td>5.0</td>
       <td>1.85</td>
       <td>0.71</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5430</th>
+      <th>5429</th>
+      <td>User 5430</td>
       <td>4.42</td>
       <td>3.63</td>
       <td>3.69</td>
@@ -14067,8 +14067,8 @@ div#notebook {
       <td>2.60</td>
       <td>1.41</td>
       <td>1.39</td>
-      <td>1.36</td>
       <td>...</td>
+      <td>3.60</td>
       <td>0.79</td>
       <td>0.78</td>
       <td>0.78</td>
@@ -14078,10 +14078,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>0.71</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5431</th>
+      <th>5430</th>
+      <td>User 5431</td>
       <td>4.42</td>
       <td>3.63</td>
       <td>3.69</td>
@@ -14091,8 +14091,8 @@ div#notebook {
       <td>2.52</td>
       <td>1.41</td>
       <td>1.38</td>
-      <td>1.36</td>
       <td>...</td>
+      <td>1.64</td>
       <td>0.79</td>
       <td>0.78</td>
       <td>0.78</td>
@@ -14102,10 +14102,10 @@ div#notebook {
       <td>5.0</td>
       <td>0.76</td>
       <td>0.71</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5432</th>
+      <th>5431</th>
+      <td>User 5432</td>
       <td>4.42</td>
       <td>3.64</td>
       <td>3.70</td>
@@ -14115,8 +14115,8 @@ div#notebook {
       <td>2.51</td>
       <td>1.40</td>
       <td>1.38</td>
-      <td>1.35</td>
       <td>...</td>
+      <td>3.59</td>
       <td>0.78</td>
       <td>0.77</td>
       <td>0.78</td>
@@ -14126,10 +14126,10 @@ div#notebook {
       <td>5.0</td>
       <td>0.75</td>
       <td>0.72</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5433</th>
+      <th>5432</th>
+      <td>User 5433</td>
       <td>4.42</td>
       <td>3.65</td>
       <td>5.00</td>
@@ -14139,8 +14139,8 @@ div#notebook {
       <td>2.52</td>
       <td>1.40</td>
       <td>1.37</td>
-      <td>1.35</td>
       <td>...</td>
+      <td>1.72</td>
       <td>0.78</td>
       <td>0.77</td>
       <td>0.78</td>
@@ -14150,10 +14150,10 @@ div#notebook {
       <td>5.0</td>
       <td>1.89</td>
       <td>0.73</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5434</th>
+      <th>5433</th>
+      <td>User 5434</td>
       <td>4.43</td>
       <td>5.00</td>
       <td>5.00</td>
@@ -14163,8 +14163,8 @@ div#notebook {
       <td>2.51</td>
       <td>1.39</td>
       <td>1.36</td>
-      <td>1.34</td>
       <td>...</td>
+      <td>0.91</td>
       <td>0.78</td>
       <td>0.77</td>
       <td>0.78</td>
@@ -14174,10 +14174,10 @@ div#notebook {
       <td>5.0</td>
       <td>0.78</td>
       <td>0.75</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5435</th>
+      <th>5434</th>
+      <td>User 5435</td>
       <td>4.44</td>
       <td>3.67</td>
       <td>3.74</td>
@@ -14187,8 +14187,8 @@ div#notebook {
       <td>2.50</td>
       <td>1.37</td>
       <td>1.35</td>
-      <td>1.32</td>
       <td>...</td>
+      <td>0.90</td>
       <td>0.77</td>
       <td>0.76</td>
       <td>0.77</td>
@@ -14198,10 +14198,10 @@ div#notebook {
       <td>5.0</td>
       <td>0.80</td>
       <td>0.75</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5436</th>
+      <th>5435</th>
+      <td>User 5436</td>
       <td>4.44</td>
       <td>5.00</td>
       <td>3.75</td>
@@ -14211,8 +14211,8 @@ div#notebook {
       <td>2.50</td>
       <td>1.36</td>
       <td>1.65</td>
-      <td>1.31</td>
       <td>...</td>
+      <td>1.59</td>
       <td>0.77</td>
       <td>0.76</td>
       <td>0.77</td>
@@ -14222,10 +14222,10 @@ div#notebook {
       <td>5.0</td>
       <td>0.80</td>
       <td>0.78</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5437</th>
+      <th>5436</th>
+      <td>User 5437</td>
       <td>4.45</td>
       <td>3.71</td>
       <td>3.74</td>
@@ -14235,8 +14235,8 @@ div#notebook {
       <td>2.50</td>
       <td>1.34</td>
       <td>1.32</td>
-      <td>1.29</td>
       <td>...</td>
+      <td>1.57</td>
       <td>0.76</td>
       <td>0.75</td>
       <td>0.76</td>
@@ -14246,10 +14246,10 @@ div#notebook {
       <td>2.8</td>
       <td>2.01</td>
       <td>1.62</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5438</th>
+      <th>5437</th>
+      <td>User 5438</td>
       <td>4.46</td>
       <td>3.72</td>
       <td>2.72</td>
@@ -14259,8 +14259,8 @@ div#notebook {
       <td>2.49</td>
       <td>1.32</td>
       <td>1.30</td>
-      <td>1.28</td>
       <td>...</td>
+      <td>1.56</td>
       <td>0.75</td>
       <td>0.74</td>
       <td>0.75</td>
@@ -14270,10 +14270,10 @@ div#notebook {
       <td>5.0</td>
       <td>2.04</td>
       <td>0.80</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5439</th>
+      <th>5438</th>
+      <td>User 5439</td>
       <td>4.47</td>
       <td>3.73</td>
       <td>2.72</td>
@@ -14283,8 +14283,8 @@ div#notebook {
       <td>2.50</td>
       <td>1.31</td>
       <td>1.29</td>
-      <td>1.26</td>
       <td>...</td>
+      <td>5.00</td>
       <td>0.75</td>
       <td>0.74</td>
       <td>0.75</td>
@@ -14294,10 +14294,10 @@ div#notebook {
       <td>5.0</td>
       <td>2.07</td>
       <td>0.82</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5440</th>
+      <th>5439</th>
+      <td>User 5440</td>
       <td>4.49</td>
       <td>5.00</td>
       <td>2.73</td>
@@ -14307,8 +14307,8 @@ div#notebook {
       <td>2.49</td>
       <td>1.29</td>
       <td>1.27</td>
-      <td>1.25</td>
       <td>...</td>
+      <td>1.53</td>
       <td>0.74</td>
       <td>0.73</td>
       <td>0.74</td>
@@ -14318,10 +14318,10 @@ div#notebook {
       <td>5.0</td>
       <td>2.10</td>
       <td>0.86</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5441</th>
+      <th>5440</th>
+      <td>User 5441</td>
       <td>4.50</td>
       <td>2.77</td>
       <td>3.81</td>
@@ -14331,8 +14331,8 @@ div#notebook {
       <td>2.49</td>
       <td>1.28</td>
       <td>1.60</td>
-      <td>1.23</td>
       <td>...</td>
+      <td>1.50</td>
       <td>0.73</td>
       <td>0.72</td>
       <td>0.73</td>
@@ -14342,10 +14342,10 @@ div#notebook {
       <td>5.0</td>
       <td>2.14</td>
       <td>0.85</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5442</th>
+      <th>5441</th>
+      <td>User 5442</td>
       <td>4.51</td>
       <td>5.00</td>
       <td>2.75</td>
@@ -14355,8 +14355,8 @@ div#notebook {
       <td>2.47</td>
       <td>1.27</td>
       <td>1.57</td>
-      <td>1.22</td>
       <td>...</td>
+      <td>1.49</td>
       <td>0.73</td>
       <td>0.72</td>
       <td>0.73</td>
@@ -14366,10 +14366,10 @@ div#notebook {
       <td>5.0</td>
       <td>2.18</td>
       <td>0.86</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5443</th>
+      <th>5442</th>
+      <td>User 5443</td>
       <td>1.52</td>
       <td>3.80</td>
       <td>2.76</td>
@@ -14379,8 +14379,8 @@ div#notebook {
       <td>2.47</td>
       <td>1.25</td>
       <td>1.23</td>
-      <td>1.20</td>
       <td>...</td>
+      <td>1.47</td>
       <td>0.72</td>
       <td>0.71</td>
       <td>0.72</td>
@@ -14390,10 +14390,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>0.88</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5444</th>
+      <th>5443</th>
+      <td>User 5444</td>
       <td>4.54</td>
       <td>5.00</td>
       <td>2.76</td>
@@ -14403,8 +14403,8 @@ div#notebook {
       <td>2.46</td>
       <td>1.23</td>
       <td>5.00</td>
-      <td>1.18</td>
       <td>...</td>
+      <td>5.00</td>
       <td>0.71</td>
       <td>0.70</td>
       <td>0.71</td>
@@ -14414,10 +14414,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>0.90</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5445</th>
+      <th>5444</th>
+      <td>User 5445</td>
       <td>4.55</td>
       <td>3.83</td>
       <td>3.87</td>
@@ -14427,8 +14427,8 @@ div#notebook {
       <td>2.46</td>
       <td>1.22</td>
       <td>5.00</td>
-      <td>1.17</td>
       <td>...</td>
+      <td>5.00</td>
       <td>0.71</td>
       <td>0.70</td>
       <td>0.71</td>
@@ -14438,10 +14438,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>0.92</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5446</th>
+      <th>5445</th>
+      <td>User 5446</td>
       <td>4.56</td>
       <td>5.00</td>
       <td>3.89</td>
@@ -14451,8 +14451,8 @@ div#notebook {
       <td>2.46</td>
       <td>1.20</td>
       <td>5.00</td>
-      <td>1.15</td>
       <td>...</td>
+      <td>5.00</td>
       <td>0.70</td>
       <td>0.69</td>
       <td>0.70</td>
@@ -14462,10 +14462,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>1.58</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5447</th>
+      <th>5446</th>
+      <td>User 5447</td>
       <td>1.32</td>
       <td>3.87</td>
       <td>3.91</td>
@@ -14475,8 +14475,8 @@ div#notebook {
       <td>2.45</td>
       <td>1.18</td>
       <td>5.00</td>
-      <td>1.13</td>
       <td>...</td>
+      <td>5.00</td>
       <td>0.70</td>
       <td>0.68</td>
       <td>0.69</td>
@@ -14486,10 +14486,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>0.97</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5448</th>
+      <th>5447</th>
+      <td>User 5448</td>
       <td>4.59</td>
       <td>3.88</td>
       <td>3.92</td>
@@ -14499,8 +14499,8 @@ div#notebook {
       <td>2.45</td>
       <td>1.16</td>
       <td>5.00</td>
-      <td>1.11</td>
       <td>...</td>
+      <td>5.00</td>
       <td>0.69</td>
       <td>0.68</td>
       <td>0.69</td>
@@ -14510,10 +14510,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>5.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5449</th>
+      <th>5448</th>
+      <td>User 5449</td>
       <td>4.60</td>
       <td>5.00</td>
       <td>3.94</td>
@@ -14523,8 +14523,8 @@ div#notebook {
       <td>2.45</td>
       <td>1.14</td>
       <td>1.13</td>
-      <td>1.10</td>
       <td>...</td>
+      <td>5.00</td>
       <td>0.68</td>
       <td>0.67</td>
       <td>0.68</td>
@@ -14534,10 +14534,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>1.01</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5450</th>
+      <th>5449</th>
+      <td>User 5450</td>
       <td>1.65</td>
       <td>3.93</td>
       <td>3.96</td>
@@ -14547,8 +14547,8 @@ div#notebook {
       <td>2.44</td>
       <td>1.13</td>
       <td>1.79</td>
-      <td>1.08</td>
       <td>...</td>
+      <td>5.00</td>
       <td>0.67</td>
       <td>0.66</td>
       <td>0.67</td>
@@ -14558,10 +14558,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>1.59</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5451</th>
+      <th>5450</th>
+      <td>User 5451</td>
       <td>0.91</td>
       <td>3.94</td>
       <td>3.98</td>
@@ -14571,8 +14571,8 @@ div#notebook {
       <td>2.44</td>
       <td>1.11</td>
       <td>1.78</td>
-      <td>1.06</td>
       <td>...</td>
+      <td>1.33</td>
       <td>0.67</td>
       <td>0.66</td>
       <td>0.67</td>
@@ -14582,10 +14582,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>5.00</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5452</th>
+      <th>5451</th>
+      <td>User 5452</td>
       <td>0.91</td>
       <td>5.00</td>
       <td>4.00</td>
@@ -14595,8 +14595,8 @@ div#notebook {
       <td>2.43</td>
       <td>1.09</td>
       <td>1.77</td>
-      <td>1.04</td>
       <td>...</td>
+      <td>5.00</td>
       <td>0.66</td>
       <td>0.65</td>
       <td>0.66</td>
@@ -14606,10 +14606,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>1.56</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5453</th>
+      <th>5452</th>
+      <td>User 5453</td>
       <td>0.93</td>
       <td>5.00</td>
       <td>4.02</td>
@@ -14619,8 +14619,8 @@ div#notebook {
       <td>1.77</td>
       <td>1.07</td>
       <td>1.76</td>
-      <td>1.02</td>
       <td>...</td>
+      <td>0.89</td>
       <td>0.65</td>
       <td>0.64</td>
       <td>0.65</td>
@@ -14630,10 +14630,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>1.09</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5454</th>
+      <th>5453</th>
+      <td>User 5454</td>
       <td>0.94</td>
       <td>5.00</td>
       <td>4.03</td>
@@ -14643,8 +14643,8 @@ div#notebook {
       <td>1.75</td>
       <td>1.05</td>
       <td>1.75</td>
-      <td>1.00</td>
       <td>...</td>
+      <td>0.87</td>
       <td>0.65</td>
       <td>0.63</td>
       <td>0.64</td>
@@ -14654,10 +14654,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>1.11</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5455</th>
+      <th>5454</th>
+      <td>User 5455</td>
       <td>0.95</td>
       <td>4.05</td>
       <td>4.05</td>
@@ -14667,8 +14667,8 @@ div#notebook {
       <td>1.76</td>
       <td>1.03</td>
       <td>1.74</td>
-      <td>0.98</td>
       <td>...</td>
+      <td>5.00</td>
       <td>0.64</td>
       <td>0.63</td>
       <td>0.64</td>
@@ -14678,10 +14678,10 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>1.12</td>
-      <td>NaN</td>
     </tr>
     <tr>
-      <th>User 5456</th>
+      <th>5455</th>
+      <td>User 5456</td>
       <td>0.95</td>
       <td>4.07</td>
       <td>5.00</td>
@@ -14691,8 +14691,8 @@ div#notebook {
       <td>2.42</td>
       <td>1.02</td>
       <td>1.74</td>
-      <td>0.96</td>
       <td>...</td>
+      <td>0.85</td>
       <td>0.64</td>
       <td>0.62</td>
       <td>0.63</td>
@@ -14702,7 +14702,6 @@ div#notebook {
       <td>5.0</td>
       <td>5.00</td>
       <td>1.17</td>
-      <td>NaN</td>
     </tr>
   </tbody>
 </table>
@@ -14726,7 +14725,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The travel data set was a relatively simple to import and format correctly. The first step was to define the column names as per the UCI ML website, there is a large list of names at the top. The second step was to read the csv using pandas. For this we set the heading to zero to cut out a row of vauge names (category 1, category, etc.) that come with the data set. The data is now indexed correctly by user with specific categories for names</p>
+<p>The travel data set was a relatively simple to import and format correctly. The first step was to define the column names as per the UCI ML website, there is a large list of names at the top. The second step was to read the csv using pandas. For this we set the heading to zero to cut out a row of vauge names (category 1, category, etc.) that come with the data set. We also had to set the index_col to false inorder to make the columns line up with the data. The data is now indexed correctly by user with specific categories for names.</p>
 
 </div>
 </div>
