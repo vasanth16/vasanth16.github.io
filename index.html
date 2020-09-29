@@ -13101,6 +13101,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Link to dataset: <a href="https://archive.ics.uci.edu/ml/datasets/Tarvel+Review+Ratings">https://archive.ics.uci.edu/ml/datasets/Tarvel+Review+Ratings</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>We are also investigating additional databases for travel data including data from other websites. We found a similar set for TripAdvisor, which follows a similar format. The challenge for comparing between datasets will be making comparisons when the attraction classes do not match. In some cases, two different review platforms might have a slightly different name for the same class of attractions. In others, classes might overlap, or worse, not exist at all in other datasets</p>
 
 </div>
@@ -13167,11 +13175,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">travelData</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/google_review_ratings.csv&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">columnsList</span><span class="p">)</span>
-<span class="n">travelData</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">travelData</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/google_review_ratings.csv&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">columnsList</span><span class="p">)</span> 
+<span class="c1"># reads ratings CSV into pandas using header 0 and names from the list above</span>
+<span class="n">travelData</span> <span class="c1"># shows dataframe</span>
 </pre></div>
 
     </div>
@@ -13184,7 +13193,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
